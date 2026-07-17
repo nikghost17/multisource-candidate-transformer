@@ -1,0 +1,30 @@
+# ── Core ──────────────────────────────────────────────────────────────────────
+pydantic>=2.0
+rapidfuzz>=3.0
+requests>=2.31
+python-dotenv>=1.0
+
+# ── LangChain ecosystem ───────────────────────────────────────────────────────
+langchain>=0.3
+langchain-google-genai>=2.0        # Gemini LLM + text-embedding-004
+langchain-chroma>=0.1              # Chroma vectorstore wrapper
+langchain-community>=0.3           # PDF / DOCX / TXT loaders
+langchain-huggingface>=0.1         # HuggingFace local embeddings (free fallback)
+
+# ── Document loading ──────────────────────────────────────────────────────────
+pypdf>=4.0                         # Required by PyPDFLoader
+docx2txt>=0.8                      # Required by Docx2txtLoader
+
+# ── Embeddings (local fallback) ───────────────────────────────────────────────
+sentence-transformers>=3.0         # all-MiniLM-L6-v2 (no API key needed)
+
+# ── Vector store ──────────────────────────────────────────────────────────────
+chromadb>=0.5
+
+# ── REST API ──────────────────────────────────────────────────────────────────
+fastapi>=0.111
+uvicorn[standard]>=0.29
+python-multipart>=0.0.9            # Required for UploadFile
+
+# ── Testing ───────────────────────────────────────────────────────────────────
+pytest>=7.0

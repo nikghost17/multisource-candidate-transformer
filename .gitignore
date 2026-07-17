@@ -1,0 +1,58 @@
+# ─── Python ──────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.whl
+
+# ─── Virtual Environments ────────────────────────────────────────────────────
+venv/
+env/
+.venv/
+ENV/
+
+# ─── Environment / Secrets ───────────────────────────────────────────────────
+.env
+# .env.example is intentionally NOT ignored — it is a safe template
+
+# ─── Test & Coverage ─────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+*.coverage
+
+# ─── IDE / Editor ────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+
+# ─── Temporary / OS ─────────────────────────────────────────────────────────
+*.log
+*.tmp
+*.bak
+*.swp
+*~
+
+# ─── Project Runtime Artifacts ───────────────────────────────────────────────
+# Uploaded files (transient temp files from the API)
+input/*.pdf
+input/*.docx
+input/*.txt
+input/*.csv
+
+# Output data (generated at runtime, not source-controlled)
+output/
+chromadb_store/
+
+# ─── Jupyter ─────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
