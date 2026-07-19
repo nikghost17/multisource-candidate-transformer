@@ -100,7 +100,7 @@ def _c(candidate: Candidate, strip_raw: bool = True) -> Dict[str, Any]:
     return data
 
 
-def _dedup_against_store(candidates: List[Candidate], store: CandidateStore) -> List[Candidate]:
+def _dedup_against_store(candidates: List[Candidate], store: MongoStorage) -> List[Candidate]:
     """
     For each newly merged candidate, check if an existing candidate in the
     store shares any email or phone. If yes, merge the new data INTO the

@@ -33,12 +33,13 @@ load_dotenv()
 # ── Mongo connection ──────────────────────────────────────────────────────────
 
 def _get_collection():
+    import certifi
     from pymongo import MongoClient
     uri = os.getenv("MONGODB_URI", "")
     if not uri:
         raise RuntimeError("MONGODB_URI not set in .env")
     db_name = os.getenv("MONGODB_DB", "candidate_platform")
-    client = MongoClient(uri, serverSelectionTimeoutMS=5000)
+    client = MongoClient(uri, serverSelectionTimeoutMS=5000, tlsCAFile=certifi.where())
     return client[db_name]["resume_chunks"]
 
 
